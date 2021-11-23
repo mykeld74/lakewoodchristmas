@@ -3,6 +3,10 @@
 	import Image from '$components/image.svelte';
 </script>
 
+<svelte:head>
+	<title>Christmas Eve Service | Westwoods Community Church</title>
+</svelte:head>
+
 <Background />
 <main>
 	<div class="ornamentContainer">
