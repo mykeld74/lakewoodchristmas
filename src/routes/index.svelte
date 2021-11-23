@@ -5,7 +5,10 @@
 
 <svelte:head>
 	<title>Christmas Eve Service | Westwoods Community Church</title>
-	<description>Join us for a casual and meaningful community celebration of Christmas</description>
+	<meta
+		name="description"
+		content="Join us for a casual and meaningful community celebration of Christmas"
+	/>
 </svelte:head>
 
 <Background />
