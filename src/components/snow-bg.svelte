@@ -104,7 +104,7 @@
 	}
 	@keyframes fall {
 		100% {
-			transform: translateY(200vh);
+			transform: translate3d(0, 200vh, 0);
 		}
 	}
 </style>
