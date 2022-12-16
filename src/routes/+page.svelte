@@ -188,8 +188,14 @@
 				allowfullscreen
 			/>
 		</div>
+		<p class="playlist">
+			For the entire playlist, please <a
+				href="https://www.youtube.com/playlist?list=PLzIu1DkkWpWy0UXYrvu-7PTCWdVmZVWm6"
+				target="_blank">CLICK HERE</a
+			>
+		</p>
 		<p class="address">
-			At <a href="https://westwoodscc.org" target="_blank" rel="noopener noreferrer"
+			<a href="https://westwoodscc.org" target="_blank" rel="noopener noreferrer"
 				>Westwoods Community Church</a
 			><br />7700 W Woodard Dr<br />Lakewood, CO 80227
 		</p>
@@ -240,7 +246,6 @@
 		font-size: clamp(22px, 3vw, 30px);
 		line-height: 1.5;
 		width: calc(100% - 40px);
-
 		margin: 0 auto;
 		color: #c1c0c1;
 	}
@@ -266,6 +271,19 @@
 		iframe {
 			width: 100%;
 			height: 100%;
+		}
+	}
+	.playlist {
+		font-size: clamp(18px, 2.5vw, 26px);
+		font-weight: 600;
+		a {
+			color: #ed1f24;
+			text-decoration: none;
+			transition: all 0.2s ease-in-out;
+			&:hover {
+				text-decoration: underline;
+				opacity: 0.8;
+			}
 		}
 	}
 	.address a {
