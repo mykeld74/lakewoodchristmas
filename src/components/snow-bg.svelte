@@ -14,7 +14,7 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background: radial-gradient(farthest-corner at 30vw 20vh, #454545 1%, #222 100%);
+		background: radial-gradient(farthest-corner at 30vw 20vh, #383838 1%, #101010 100%);
 		z-index: -1;
 	}
 	$s1: '';

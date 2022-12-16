@@ -178,7 +178,16 @@
 	<div class="christmasText">
 		<p class="desc">A casual and meaningful community celebration of Christmas</p>
 		<h1 class="christmasEve">Christmas Eve Service</h1>
-		<p class="dateAndTime">December 24Th <br />3:30PM & 5:00PM</p>
+		<p class="dateAndTime">December 24th <br />3:30PM & 5:00PM</p>
+		<div class="videoContainer">
+			<iframe
+				src="https://www.youtube.com/embed/0fBFgOK7pfQ"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			/>
+		</div>
 		<p class="address">
 			At <a href="https://westwoodscc.org" target="_blank" rel="noopener noreferrer"
 				>Westwoods Community Church</a
@@ -231,7 +240,7 @@
 		font-size: clamp(22px, 3vw, 30px);
 		line-height: 1.5;
 		width: calc(100% - 40px);
-		max-width: 600px;
+
 		margin: 0 auto;
 		color: #c1c0c1;
 	}
@@ -241,7 +250,6 @@
 		line-height: 1.2;
 		font-weight: 400;
 		width: calc(100% - 40px);
-		max-width: 600px;
 		margin: 0 auto;
 		color: #c6a05f;
 	}
@@ -250,7 +258,16 @@
 		font-size: clamp(18px, 2.5vw, 26px);
 		font-weight: 600;
 	}
-
+	.videoContainer {
+		width: calc(100% - 40px);
+		max-width: 600px;
+		margin: 20px auto;
+		aspect-ratio: 16/9;
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+	}
 	.address a {
 		color: #fff;
 		text-decoration: none;

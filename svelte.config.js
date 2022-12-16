@@ -1,30 +1,17 @@
-import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-netlify';
-import path from 'path';
+import { vitePreprocess } from '@sveltejs/kit/vite';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
+	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
+	preprocess: vitePreprocess(),
 
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
 		adapter: adapter(),
-		target: '#svelte',
-		vite: {
-			resolve: {
-				alias: {
-					$css: path.resolve('./src/css'),
-					$components: path.resolve('./src/components'),
-					$data: path.resolve('./src/data'),
-					$img: path.resolve('./src/images')
-				}
-			}
+		alias: {
+			$components: './src/components',
+			$img: './src/images'
 		}
 	}
 };
