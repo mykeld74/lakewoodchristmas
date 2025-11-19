@@ -186,7 +186,7 @@
 				frameborder="0"
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 				allowfullscreen
-			/>
+			></iframe>
 		</div>
 		<p class="playlist">
 			For the entire playlist, please <a
@@ -207,7 +207,7 @@
 	</div>
 </main>
 
-<style lang="scss">
+<style>
 	@import url('https://fonts.googleapis.com/css2?family=Belleza&family=M+PLUS+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 	.ornamentContainer {
@@ -217,31 +217,39 @@
 		max-width: 1280px;
 		margin: 0 auto;
 	}
+
 	.ornament {
 		width: 15vh;
 		max-width: 200px;
 	}
+
 	.ornament1 {
 		transform: translateY(-7vh);
 	}
+
 	.ornament2 {
 		transform: translateY(-1.5vh);
 	}
+
 	.ornament3 {
 		transform: translateY(-10vh);
 	}
+
 	.ornament4 {
 		transform: translateY(-3vh);
 	}
+
 	.ornament5 {
 		transform: translateY(-8.5vh);
 	}
+
 	.christmasText {
 		font-family: 'M PLUS 2', sans-serif;
 		color: #fff;
 		text-align: center;
 		text-transform: uppercase;
 	}
+
 	.desc {
 		font-size: clamp(22px, 3vw, 30px);
 		line-height: 1.5;
@@ -249,6 +257,7 @@
 		margin: 0 auto;
 		color: #c1c0c1;
 	}
+
 	.christmasEve {
 		font-family: 'Belleza', sans-serif;
 		font-size: clamp(60px, 7vw, 80px);
@@ -258,43 +267,52 @@
 		margin: 0 auto;
 		color: #c6a05f;
 	}
+
 	.dateAndTime,
 	.address {
 		font-size: clamp(18px, 2.5vw, 26px);
 		font-weight: 600;
 	}
+
 	.videoContainer {
 		width: calc(100% - 40px);
 		max-width: 600px;
 		margin: 20px auto;
 		aspect-ratio: 16/9;
-		iframe {
-			width: 100%;
-			height: 100%;
-		}
 	}
+
+	.videoContainer iframe {
+		width: 100%;
+		height: 100%;
+	}
+
 	.playlist {
 		font-size: clamp(18px, 2.5vw, 26px);
 		font-weight: 600;
-		a {
-			color: #ed1f24;
-			text-decoration: none;
-			transition: all 0.2s ease-in-out;
-			&:hover {
-				text-decoration: underline;
-				opacity: 0.8;
-			}
-		}
 	}
+
+	.playlist a {
+		color: #ed1f24;
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+	}
+
+	.playlist a:hover {
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+
 	.address a {
 		color: #fff;
 		text-decoration: none;
 		transition: all 0.2s ease-in-out;
-		&:hover {
-			text-decoration: underline;
-			opacity: 0.8;
-		}
 	}
+
+	.address a:hover {
+		text-decoration: underline;
+		opacity: 0.8;
+	}
+
 	.logoContainer {
 		width: calc(100% - 40px);
 		max-width: 300px;
