@@ -33,16 +33,16 @@
 
 <div id="background">
 	{#each sn1 as sf1}
-		<div class={`snowflakes snowflake1 sf${sf1}`} style={`left: ${position[sf1]}%`} />
+		<div class={`snowflakes snowflake1 sf${sf1}`} style={`left: ${position[sf1]}%`}></div>
 	{/each}
 	{#each sn2 as sf2}
-		<div class={`snowflakes snowflake2 sf${sf2}`} style={`left: ${position[sf2]}%`} />
+		<div class={`snowflakes snowflake2 sf${sf2}`} style={`left: ${position[sf2]}%`}></div>
 	{/each}
 	{#each sn3 as sf3}
-		<div class={`snowflakes snowflake3 sf${sf3}`} style={`left: ${position[sf3]}%`} />
+		<div class={`snowflakes snowflake3 sf${sf3}`} style={`left: ${position[sf3]}%`}></div>
 	{/each}
 	{#each sn4 as sf4}
-		<div class={`snowflakes snowflake2 sf${sf4}`} style={`left: ${position[sf4]}%`} />
+		<div class={`snowflakes snowflake2 sf${sf4}`} style={`left: ${position[sf4]}%`}></div>
 	{/each}
 </div>
 
