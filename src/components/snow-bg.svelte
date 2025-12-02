@@ -1,31 +1,13 @@
-<script>
-	function generateBoxShadow(count) {
-		const shadows = [];
-		for (let i = 0; i < count; i++) {
-			const x = Math.random() * 1000 * 0.1;
-			const y = Math.random() * 1000 * 0.1;
-			const blur = 0;
-			const spread = Math.random() * 50 * -0.01;
-			shadows.push(`${x}vw ${y}vh ${blur} ${spread}rem #fff`);
-		}
-		return shadows.join(', ');
-	}
-
-	const s1 = generateBoxShadow(50);
-	const s2 = generateBoxShadow(50);
-	const s3 = generateBoxShadow(50);
-</script>
-
 <div class="wrapper">
-	<div class="snow layer1 a" style="box-shadow: {s1}"></div>
-	<div class="snow layer1" style="box-shadow: {s1}"></div>
-	<div class="snow layer2 a" style="box-shadow: {s2}"></div>
-	<div class="snow layer2" style="box-shadow: {s2}"></div>
-	<div class="snow layer3 a" style="box-shadow: {s3}"></div>
-	<div class="snow layer3" style="box-shadow: {s3}"></div>
+	<div class="snow layer1 a"></div>
+	<div class="snow layer1"></div>
+	<div class="snow layer2 a"></div>
+	<div class="snow layer2"></div>
+	<div class="snow layer3 a"></div>
+	<div class="snow layer3"></div>
 </div>
 
-<style>
+<style lang="scss">
 	.wrapper {
 		position: fixed;
 		top: 0;
@@ -33,9 +15,55 @@
 		width: 100vw;
 		height: 100vh;
 		background: radial-gradient(farthest-corner at 30vw 20vh, #383838 1%, #101010 100%);
+		background: #18293d;
 		z-index: -1;
 	}
-
+	$s1: '';
+	$s2: '';
+	$s3: '';
+	@for $i from 1 through 50 {
+		$s1: $s1 +
+			random(1000) *
+			0.1vw +
+			' ' +
+			random(1000) *
+			0.1vh +
+			' ' +
+			0 +
+			' ' +
+			random(50) *
+			-0.01rem +
+			#fff;
+		$s2: $s2 +
+			random(1000) *
+			0.1vw +
+			' ' +
+			random(1000) *
+			0.1vh +
+			' ' +
+			0 +
+			' ' +
+			random(50) *
+			-0.01rem +
+			#fff;
+		$s3: $s3 +
+			random(1000) *
+			0.1vw +
+			' ' +
+			random(1000) *
+			0.1vh +
+			' ' +
+			0 +
+			' ' +
+			random(50) *
+			-0.01rem +
+			#fff;
+		@if $i < 50 {
+			$s1: $s1 + ',';
+			$s2: $s2 + ',';
+			$s3: $s3 + ',';
+		}
+	}
 	.snow {
 		border-radius: 50%;
 		opacity: 0.8;
@@ -45,40 +73,36 @@
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 	}
-
 	.layer1 {
 		width: 1rem;
 		height: 1rem;
 		filter: blur(1px);
+		box-shadow: #{$s1};
 		animation-duration: 10s;
 	}
-
 	.layer1.a {
 		animation-delay: -5s;
 	}
-
 	.layer2 {
 		width: 0.6rem;
 		height: 0.6rem;
 		filter: blur(2px);
+		box-shadow: #{$s2};
 		animation-duration: 16s;
 	}
-
 	.layer2.a {
 		animation-delay: -8s;
 	}
-
 	.layer3 {
 		width: 0.8rem;
 		height: 0.8rem;
 		filter: blur(6px);
+		box-shadow: #{$s3};
 		animation-duration: 12s;
 	}
-
 	.layer3.a {
 		animation-delay: -3s;
 	}
-
 	@keyframes fall {
 		100% {
 			transform: translate3d(0, 200vh, 0);
