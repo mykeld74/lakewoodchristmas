@@ -16,7 +16,7 @@
 	<div class="christmasText">
 		<h1 class="christmasEve">Christmas Eve Service</h1>
 		<img
-			src="https://res.cloudinary.com/mykeld74/image/upload/v1764706293/lakewoodchristmas/AWearyWorldRejoicesTransparent"
+			src="https://res.cloudinary.com/mykeld74/image/upload/f_auto,q_auto/lakewoodchristmas/AWearyWorldRejoicesTransparent"
 			alt="A Weary World Rejoices"
 			class="mainImage"
 		/>
