@@ -1,13 +1,30 @@
+<script lang="ts">
+	function generateSnowShadows(count: number) {
+		const shadows = [];
+		for (let i = 0; i < count; i++) {
+			const x = Math.random() * 1000 * 0.1;
+			const y = Math.random() * 1000 * 0.1;
+			const blur = Math.random() * 50 * -0.01;
+			shadows.push(`${x}vw ${y}vh 0 ${blur}rem #fff`);
+		}
+		return shadows.join(', ');
+	}
+
+	let s1 = generateSnowShadows(50);
+	let s2 = generateSnowShadows(50);
+	let s3 = generateSnowShadows(50);
+</script>
+
 <div class="wrapper">
-	<div class="snow layer1 a"></div>
-	<div class="snow layer1"></div>
-	<div class="snow layer2 a"></div>
-	<div class="snow layer2"></div>
-	<div class="snow layer3 a"></div>
-	<div class="snow layer3"></div>
+	<div class="snow layer1 a" style="box-shadow: {s1}"></div>
+	<div class="snow layer1" style="box-shadow: {s1}"></div>
+	<div class="snow layer2 a" style="box-shadow: {s2}"></div>
+	<div class="snow layer2" style="box-shadow: {s2}"></div>
+	<div class="snow layer3 a" style="box-shadow: {s3}"></div>
+	<div class="snow layer3" style="box-shadow: {s3}"></div>
 </div>
 
-<style lang="scss">
+<style>
 	.wrapper {
 		position: fixed;
 		top: 0;
@@ -17,52 +34,6 @@
 		background: radial-gradient(farthest-corner at 30vw 20vh, #383838 1%, #101010 100%);
 		background: #18293d;
 		z-index: -1;
-	}
-	$s1: '';
-	$s2: '';
-	$s3: '';
-	@for $i from 1 through 50 {
-		$s1: $s1 +
-			random(1000) *
-			0.1vw +
-			' ' +
-			random(1000) *
-			0.1vh +
-			' ' +
-			0 +
-			' ' +
-			random(50) *
-			-0.01rem +
-			#fff;
-		$s2: $s2 +
-			random(1000) *
-			0.1vw +
-			' ' +
-			random(1000) *
-			0.1vh +
-			' ' +
-			0 +
-			' ' +
-			random(50) *
-			-0.01rem +
-			#fff;
-		$s3: $s3 +
-			random(1000) *
-			0.1vw +
-			' ' +
-			random(1000) *
-			0.1vh +
-			' ' +
-			0 +
-			' ' +
-			random(50) *
-			-0.01rem +
-			#fff;
-		@if $i < 50 {
-			$s1: $s1 + ',';
-			$s2: $s2 + ',';
-			$s3: $s3 + ',';
-		}
 	}
 	.snow {
 		border-radius: 50%;
@@ -77,7 +48,6 @@
 		width: 1rem;
 		height: 1rem;
 		filter: blur(1px);
-		box-shadow: #{$s1};
 		animation-duration: 10s;
 	}
 	.layer1.a {
@@ -87,7 +57,6 @@
 		width: 0.6rem;
 		height: 0.6rem;
 		filter: blur(2px);
-		box-shadow: #{$s2};
 		animation-duration: 16s;
 	}
 	.layer2.a {
@@ -97,7 +66,6 @@
 		width: 0.8rem;
 		height: 0.8rem;
 		filter: blur(6px);
-		box-shadow: #{$s3};
 		animation-duration: 12s;
 	}
 	.layer3.a {

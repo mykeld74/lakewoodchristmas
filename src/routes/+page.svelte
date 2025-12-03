@@ -22,6 +22,12 @@
 		/>
 		<p class="dateAndTime">December 24th <br />2:00PM & 3:30PM</p>
 
+		<a
+			href="https://westwoodscc.org/about-us/plan-a-visit"
+			target="_blank"
+			rel="noopener noreferrer"><div class="visitButton">Plan your visit</div></a
+		>
+
 		<p class="address">
 			<a href="https://westwoodscc.org" target="_blank" rel="noopener noreferrer"
 				>Westwoods Community Church</a
@@ -152,5 +158,28 @@
 		width: calc(100% - 40px);
 		max-width: 300px;
 		margin: 20px auto;
+	}
+	.visitButton {
+		font-size: clamp(18px, 2.5vw, 26px);
+		font-weight: 600;
+		background: #2a476a;
+		color: #c9c8c3;
+		text-decoration: none;
+		transition: all 0.2s ease-in-out;
+		padding: 10px 20px;
+		width: fit-content;
+		margin: 0 auto;
+		border-radius: 5px;
+		box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			scale: 1.05;
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.8);
+		}
+	}
+
+	a {
+		text-decoration: none;
 	}
 </style>
